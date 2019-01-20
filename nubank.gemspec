@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["lucas.mansur2@gmail.com"]
 
   spec.summary       = %q{Unofficial client for the Nubank API}
-  spec.description   = %q{This is an unofficial client for the undocumented Nubank API. Consider this to be very unstable. You may have your access temporarily blocked if used too much. Use at your own risk.}
+  spec.description   = %q{This is an unofficial client of the undocumented Nubank API. It may be unstable. You may have your access temporarily blocked if used too much. Use at your own risk.}
   spec.homepage      = "https://github.com/lmansur/nubank-ruby"
   spec.license       = "MIT"
 

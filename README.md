@@ -1,8 +1,8 @@
 # Nubank
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/nubank`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is an unofficial client of the undocumented Nubank API.
+It may be unstable. You may have your access temporarily blocked if used too much.
+**Use at your own risk.**
 
 ## Installation
 
@@ -22,7 +22,66 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Client Instantiation
+
+```ruby
+client = Nubank::Client.new(
+  "12345678901" # Your CPF
+  "123456"      # Your Password
+)
+```
+
+### Authentication
+
+```ruby
+client.login
+```
+
+**CAUTION: Hitting this endpoint repeatedly will block future login attempts temporarily, even in the Web interface.**
+
+### Account
+
+```ruby
+client.account
+```
+
+Returns your Nubank account information, such as `due_date`, `available_balance` and `balances`.
+
+### Events
+
+```ruby
+client.events
+```
+
+Returns all the events for your account, starting with the most recent. This includes transactions, bill payment, limit change, card activation and more.
+
+### Response handling
+
+```ruby
+response = client.events
+
+response.code # => 200
+response.body # => Serialized body
+response.parsed_body # => JSON body
+```
+
+### Resource Objects
+
+To access the Resource object, use `Response#resource`. For example:
+
+```ruby
+response = client.events
+events = response.resource
+```
+
+The Resource object responds to all the attributes the API exposes:
+
+```ruby
+events.each do |event|
+  puts event.description
+  puts event.amount if event.category == "transaction"
+end
+```
 
 ## Development
 
