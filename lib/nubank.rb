@@ -1,6 +1,10 @@
-require "nubank/version"
+require 'nubank/version'
+require 'nubank/client'
 
 module Nubank
   class Error < StandardError; end
-  # Your code goes here...
+
+  def self.client(identification, password)
+    Client.new(identification, password)
+  end
 end
