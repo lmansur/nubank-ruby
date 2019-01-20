@@ -45,7 +45,7 @@ client.login
 client.account
 ```
 
-Returns your Nubank account information, such as `due_date`, `available_balance` and `balances`.
+Returns your account information, such as `due_date`, `available_balance` and `balances`.
 
 ### Events
 
@@ -65,7 +65,7 @@ response.body # => Serialized body
 response.parsed_body # => JSON body
 ```
 
-### Resource Objects
+### Resource objects
 
 To access the Resource object, use `Response#resource`. For example:
 
