@@ -9,7 +9,7 @@ It may be unstable. You may have your access temporarily blocked if used too muc
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'nubank'
+gem 'nubank_client'
 ```
 
 And then execute:
