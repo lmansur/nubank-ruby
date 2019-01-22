@@ -16,12 +16,12 @@ module Nubank
       attribute :next_due_date, Types::Params::Date
       attribute :interest_rate, Types::Params::Decimal
       attribute :status, Types::Coercible::String
-      attribute :card_active_since, Types::Params::DateTime
+      attribute :card_active_since, Types::Params::Time
       attribute :net_available, Types::Params::Decimal
       attribute :limit_range_max, Types::Params::Decimal
       attribute :next_close_date, Types::Params::Date
       attribute :current_balance, Types::Params::Decimal
-      attribute :created_at, Types::Params::DateTime
+      attribute :created_at, Types::Params::Time
       attribute :request_id, Types::Coercible::String
       attribute :customer_id, Types::Coercible::String
       attribute :credit_limit, Types::Params::Decimal
