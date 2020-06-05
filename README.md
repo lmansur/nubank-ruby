@@ -1,3 +1,5 @@
+**Nubank now requires 2FA for web access, and this client does not account for this. It most likely won't work.**
+
 # Nubank
 
 This is an unofficial client of the undocumented Nubank API.
